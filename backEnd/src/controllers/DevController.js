@@ -69,16 +69,21 @@ module.exports = {
     return response.json(dev);
   },
 
-  async destroy (request, response) {
+  async delete (request, response) {
+    if (!request.params.github_username) {
+      return response.status(401).json({ error: 'Incorret Params' });
+    }
     const { github_username } = request.params;
 
-    let dev = await Dev.findOne({ github_username });
-    console.log(github_username);
-    if (dev) {
-      dev = await Dev.destroy({ where: { github_username: github_username } });  
-    }
+    const dev = await Dev.findOne({ github_username });
 
-    return response.json({ message: "Usuário excluído com sucesso!"});
+    if (!dev) {
+      return response.status(400).json({ error: 'Invalid Dev' });
+    }
+        
+    await dev.remove({ where: { github_username } });
+
+    return response.json({ Success: `Dev Successfully deleted!` });
   }
 
 };
