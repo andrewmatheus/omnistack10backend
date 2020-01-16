@@ -22,3 +22,25 @@ Passo à passo BackEnd:
   yarn create react-app web
 
   yarn add axios
+
+  Passo à passo Mobile:
+
+  yarn global add expo-cli
+
+  expo init mobile
+
+  yarn add react-navigation
+
+  expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+
+  yarn add react-navigation-stack
+
+  yarn add @react-native-community/masked-view
+
+  expo install react-native-maps
+
+  expo install expo-location
+
+  expo install react-native-webview
+
+  yarn add axios

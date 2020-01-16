@@ -40,12 +40,44 @@ li.dev-item p {
   margin: 10px 0;
 }
 
-li.dev-item a {
+li.dev-item .click-dev {
+  display: flex;    
+}
+
+li.dev-item .click-dev a {
   color: #8e4dff;
   font-size: 14px;
   text-decoration: none;
 }
 
-li.dev-item a:hover {
+li.dev-item .click-dev a:hover {
   color: #5a2ea6;
+}
+
+li.dev-item .click-dev .action {
+    margin: -5px 10px 0 30px;
+    padding-left: 50px;
+}
+
+li.dev-item .click-dev .action button {
+  height: 28px;
+  margin-right: 5px;
+  width: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFF;  
+  background: #8e4dff;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15%;
+}
+
+
+li.dev-item .click-dev .action .update:hover {
+  background: #00FF00;
+}
+
+li.dev-item .click-dev .action .delete:hover {
+  background: #FF0000;
+  
 }

@@ -15,7 +15,13 @@ function DevItem(props){
         </div>
       </header>
       <p>{dev.bio}</p>
-      <a href={`https://github.com/${dev.github_username}`}>Acessar perfil Github</a>
+      <div className="click-dev">
+        <a href={`https://github.com/${dev.github_username}`}>Acessar perfil Github</a>
+        <div className="action">
+          <button type="button" className="update">Alterar</button>
+          <button type="button" className="delete">Excluir</button> 
+        </div>        
+      </div>
     </li>
   );
 }
