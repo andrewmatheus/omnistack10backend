@@ -15,6 +15,8 @@ Passo à passo BackEnd:
 
   yarn add cors
 
+  yarn add socket.io
+
   roda backEnd com yarn dev na pasta backEnd
 
   Passo à passo frontEnd:
